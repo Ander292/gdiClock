@@ -150,7 +150,7 @@ LRESULT CALLBACK MainWindowCallback(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM 
                     }
                     if(toRedraw) InvalidateRect(hWnd, NULL, TRUE);
                 } break;
-                default: MessageBeep(MB_ICONWARNING);
+                default: MessageBeep(MB_ICONWARNING); break;
             }
             return 0;
 

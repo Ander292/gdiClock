@@ -164,7 +164,6 @@ LRESULT CALLBACK MainWindowCallback(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM 
 
 int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine, int nShowCmd){
 
-
     WNDCLASSW WindowClass = {0};
     WindowClass.style = CS_HREDRAW | CS_VREDRAW;
     WindowClass.lpfnWndProc = MainWindowCallback;
@@ -179,11 +178,9 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
     
     if(!RegisterClassW(&WindowClass)) DisplayFatalError(GetLastError());
 
-
     RECT r = {0, 0, DEFAULT_WIDTH, DEFAULT_HEIGTH};
     AdjustWindowRect(&r, WS_VISIBLE | WS_SYSMENU, TRUE);
     
-
     HWND hWindow = CreateWindowW(
         szProgramName,
         szProgramName,
@@ -200,10 +197,8 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 
     if(!hWindow) DisplayFatalError(GetLastError());
 
-
     ShowWindow(hWindow, nShowCmd);
     UpdateWindow(hWindow);
-
 
     MSG Message;
     while(GetMessageW(&Message, NULL, 0, 0)){

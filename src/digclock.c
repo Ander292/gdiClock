@@ -128,7 +128,11 @@ LRESULT CALLBACK MainWindowCallback(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM 
                     iStyle++;
                     if(iStyle > 2) iStyle = 0;
                     InvalidateRect(hWnd, NULL, TRUE);
-                }
+                } break;
+                case 'W':{ // For ctrl+w alternative to ALT+F4
+                    BOOL ctrlIsDown = GetKeyState(VK_CONTROL) < 0;
+                    if(ctrlIsDown) PostQuitMessage(0);
+                } break;
             } break;
         } return 0;
         case WM_TIMER:

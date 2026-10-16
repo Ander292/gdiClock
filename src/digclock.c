@@ -20,24 +20,24 @@
 #define FormatColor(r, g, b) (COLORREF)((r) | (g) << 8 | (b) << 16)
 #define sBoolean(i) ((i) ? L"True" : L"False")
 
-wchar_t *szProgramName = L"Clock";
+static wchar_t *szProgramName = L"Clock";
 
 typedef struct window_size_info{
     int cx;
     int cy;
 } wSizeInfo;
 
-wSizeInfo wsInfo;
-int time[6] = {0};
-int tOld[6] = {0};
-int sTime[6] = {0};
+static wSizeInfo wsInfo;
+static int time[6] = {0};
+static int tOld[6] = {0};
+static int sTime[6] = {0};
 
-int iStyle = STYLE_FULL;
+static int iStyle = STYLE_FULL;
 
-COLORREF cColor;
+static COLORREF cColor;
 
 
-void DisplayFatalError(DWORD dwError){
+static void DisplayFatalError(DWORD dwError){
     LPWSTR wcStr = NULL;
     FormatMessageW(
         FORMAT_MESSAGE_ALLOCATE_BUFFER | 

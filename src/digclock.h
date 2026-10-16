@@ -12,7 +12,7 @@ The program draws them on screen depending on the current time
 
 // Full regular numbers
 
-int nOneF[8][6] = {
+static int nOneF[8][6] = {
     0, 0, 0, 0, 0, 0,
     0, 0, 0, 1, 0, 0,
     0, 0, 1, 1, 0, 0,
@@ -23,7 +23,7 @@ int nOneF[8][6] = {
     0, 0, 0, 0, 0, 0
 };
 
-int nTwoF[8][6] = {
+static int nTwoF[8][6] = {
     0, 0, 0, 0, 0, 0,
     0, 0, 1, 1, 1, 0,
     0, 1, 0, 0, 1, 0,
@@ -34,7 +34,7 @@ int nTwoF[8][6] = {
     0, 0, 0, 0, 0, 0
 };
 
-int nThreeF[8][6] = {
+static int nThreeF[8][6] = {
     0, 0, 0, 0, 0, 0,
     0, 1, 1, 1, 1, 0,
     0, 0, 0, 0, 1, 0,
@@ -45,7 +45,7 @@ int nThreeF[8][6] = {
     0, 0, 0, 0, 0, 0 
 };
 
-int nFourF[8][6] = {
+static int nFourF[8][6] = {
     0, 0, 0, 0, 0, 0,
     0, 1, 0, 0, 1, 0,
     0, 1, 0, 0, 1, 0,
@@ -56,7 +56,7 @@ int nFourF[8][6] = {
     0, 0, 0, 0, 0, 0
 };
 
-int nFiveF[8][6] = {
+static int nFiveF[8][6] = {
     0, 0, 0, 0, 0, 0,
     0, 1, 1, 1, 1, 0,
     0, 1, 0, 0, 0, 0,
@@ -67,7 +67,7 @@ int nFiveF[8][6] = {
     0, 0, 0, 0, 0, 0
 };
 
-int nSixF[8][6] = {
+static int nSixF[8][6] = {
     0, 0, 0, 0, 0, 0,
     0, 1, 1, 1, 1, 0,
     0, 1, 0, 0, 0, 0,
@@ -78,7 +78,7 @@ int nSixF[8][6] = {
     0, 0, 0, 0, 0, 0
 };
 
-int nSevenF[8][6] = {
+static int nSevenF[8][6] = {
     0, 0, 0, 0, 0, 0,
     0, 1, 1, 1, 1, 0,
     0, 0, 0, 0, 1, 0,
@@ -89,7 +89,7 @@ int nSevenF[8][6] = {
     0, 0, 0, 0, 0, 0
 };
 
-int nEigthF[8][6] = {
+static int nEigthF[8][6] = {
     0, 0, 0, 0, 0, 0,
     0, 0, 1, 1, 0, 0,
     0, 1, 0, 0, 1, 0,
@@ -100,7 +100,7 @@ int nEigthF[8][6] = {
     0, 0, 0, 0, 0, 0
 };
 
-int nNineF[8][6] = {
+static int nNineF[8][6] = {
     0, 0, 0, 0, 0, 0,
     0, 1, 1, 1, 1, 0,
     0, 1, 0, 0, 1, 0,
@@ -111,7 +111,7 @@ int nNineF[8][6] = {
     0, 0, 0, 0, 0, 0 
 };
 
-int nZeroF[8][6] = {
+static int nZeroF[8][6] = {
     0, 0, 0, 0, 0, 0,
     0, 1, 1, 1, 1, 0,
     0, 1, 0, 0, 1, 0,
@@ -122,11 +122,11 @@ int nZeroF[8][6] = {
     0, 0, 0, 0, 0, 0 
 };
 
-int (*numsF[10])[6] = {nZeroF, nOneF, nTwoF, nThreeF, nFourF, nFiveF, nSixF, nSevenF, nEigthF, nNineF};
+static int (*numsF[10])[6] = {nZeroF, nOneF, nTwoF, nThreeF, nFourF, nFiveF, nSixF, nSevenF, nEigthF, nNineF};
 
 // Stylized numbers
 
-int nOneS[8][6] = {
+static int nOneS[8][6] = {
     0, 0, 0, 0, 0, 0,
     0, 0, 0, 0, 0, 0,
     0, 0, 0, 0, 0, 0,
@@ -137,7 +137,7 @@ int nOneS[8][6] = {
     0, 0, 0, 0, 0, 0
 };
 
-int nTwoS[8][6] = {
+static int nTwoS[8][6] = {
     0, 0, 0, 0, 0, 0,
     0, 0, 0, 0, 0, 0,
     0, 1, 1, 1, 0, 0,
@@ -148,7 +148,7 @@ int nTwoS[8][6] = {
     0, 0, 0, 0, 0, 0
 };
 
-int nThreeS[8][6] = {
+static int nThreeS[8][6] = {
     0, 0, 0, 0, 0, 0,
     0, 0, 0, 0, 0, 0,
     0, 1, 1, 1, 0, 0,
@@ -159,7 +159,7 @@ int nThreeS[8][6] = {
     0, 0, 0, 0, 0, 0 
 };
 
-int nFourS[8][6] = {
+static int nFourS[8][6] = {
     0, 0, 0, 0, 0, 0,
     0, 1, 0, 0, 1, 0,
     0, 1, 0, 0, 1, 0,
@@ -170,7 +170,7 @@ int nFourS[8][6] = {
     0, 0, 0, 0, 0, 0
 };
 
-int nFiveS[8][6] = {
+static int nFiveS[8][6] = {
     0, 0, 0, 0, 0, 0,
     0, 1, 1, 1, 1, 0,
     0, 1, 0, 0, 0, 0,
@@ -181,7 +181,7 @@ int nFiveS[8][6] = {
     0, 0, 0, 0, 0, 0
 };
 
-int nSixS[8][6] = {
+static int nSixS[8][6] = {
     0, 0, 0, 0, 0, 0,
     0, 1, 1, 1, 1, 0,
     0, 0, 0, 0, 0, 0,
@@ -192,7 +192,7 @@ int nSixS[8][6] = {
     0, 0, 0, 0, 0, 0
 };
 
-int nSevenS[8][6] = {
+static int nSevenS[8][6] = {
     0, 0, 0, 0, 0, 0,
     0, 1, 1, 1, 1, 0,
     0, 0, 0, 0, 0, 0,
@@ -203,7 +203,7 @@ int nSevenS[8][6] = {
     0, 0, 0, 0, 0, 0
 };
 
-int nEigthS[8][6] = {
+static int nEigthS[8][6] = {
     0, 0, 0, 0, 0, 0,
     0, 0, 0, 0, 0, 0,
     0, 0, 0, 0, 0, 0,
@@ -214,7 +214,7 @@ int nEigthS[8][6] = {
     0, 0, 0, 0, 0, 0
 };
 
-int nNineS[8][6] = {
+static int nNineS[8][6] = {
     0, 0, 0, 0, 0, 0,
     0, 0, 0, 0, 0, 0,
     0, 0, 0, 0, 0, 0,
@@ -225,7 +225,7 @@ int nNineS[8][6] = {
     0, 0, 0, 0, 0, 0
 };
 
-int nZeroS[8][6] = {
+static int nZeroS[8][6] = {
     0, 0, 0, 0, 0, 0,
     0, 0, 0, 0, 0, 0,
     0, 0, 1, 1, 0, 0,
@@ -236,11 +236,11 @@ int nZeroS[8][6] = {
     0, 0, 0, 0, 0, 0
 };
 
-int (*numsS[10])[6] = {nZeroS, nOneS, nTwoS, nThreeS, nFourS, nFiveS, nSixS, nSevenS, nEigthS, nNineS};
+static int (*numsS[10])[6] = {nZeroS, nOneS, nTwoS, nThreeS, nFourS, nFiveS, nSixS, nSevenS, nEigthS, nNineS};
 
 // Line numbers
 
-int nOneC[8][6] = {
+static int nOneC[8][6] = {
     0, 0, 0, 0, 0, 0,
     0, 1, 0, 0, 0, 0,
     0, 0, 0, 0, 0, 0,
@@ -251,7 +251,7 @@ int nOneC[8][6] = {
     0, 0, 0, 0, 0, 0
 };
 
-int nTwoC[8][6] = {
+static int nTwoC[8][6] = {
     0, 0, 0, 0, 0, 0,
     0, 1, 0, 0, 1, 0,
     0, 0, 0, 0, 0, 0,
@@ -262,7 +262,7 @@ int nTwoC[8][6] = {
     0, 0, 0, 0, 0, 0
 };
 
-int nThreeC[8][6] = {
+static int nThreeC[8][6] = {
     0, 0, 0, 0, 0, 0,
     0, 1, 0, 0, 1, 0,
     0, 0, 0, 0, 0, 0,
@@ -273,7 +273,7 @@ int nThreeC[8][6] = {
     0, 0, 0, 0, 0, 0 
 };
 
-int nFourC[8][6] = {
+static int nFourC[8][6] = {
     0, 0, 0, 0, 0, 0,
     0, 1, 0, 0, 1, 0,
     0, 0, 0, 0, 0, 0,
@@ -284,7 +284,7 @@ int nFourC[8][6] = {
     0, 0, 0, 0, 0, 0
 };
 
-int nFiveC[8][6] = {
+static int nFiveC[8][6] = {
     0, 0, 0, 0, 0, 0,
     0, 1, 0, 0, 1, 0,
     0, 0, 0, 0, 0, 0,
@@ -295,7 +295,7 @@ int nFiveC[8][6] = {
     0, 0, 0, 0, 0, 0
 };
 
-int nSixC[8][6] = {
+static int nSixC[8][6] = {
     0, 0, 0, 0, 0, 0,
     0, 1, 0, 0, 1, 0,
     0, 0, 0, 0, 0, 0,
@@ -306,7 +306,7 @@ int nSixC[8][6] = {
     0, 0, 0, 0, 0, 0
 };
 
-int nSevenC[8][6] = {
+static int nSevenC[8][6] = {
     0, 0, 0, 0, 0, 0,
     0, 1, 0, 0, 1, 0,
     0, 0, 0, 0, 0, 0,
@@ -317,7 +317,7 @@ int nSevenC[8][6] = {
     0, 0, 0, 0, 0, 0
 };
 
-int nEigthC[8][6] = {
+static int nEigthC[8][6] = {
     0, 0, 0, 0, 0, 0,
     0, 1, 0, 0, 1, 0,
     0, 0, 0, 0, 0, 0,
@@ -328,7 +328,7 @@ int nEigthC[8][6] = {
     0, 0, 0, 0, 0, 0
 };
 
-int nNineC[8][6] = {
+static int nNineC[8][6] = {
     0, 0, 0, 0, 0, 0,
     0, 1, 1, 0, 1, 0,
     0, 0, 0, 0, 0, 0,
@@ -339,7 +339,7 @@ int nNineC[8][6] = {
     0, 0, 0, 0, 0, 0
 };
 
-int nZeroC[8][6] = {
+static int nZeroC[8][6] = {
     0, 0, 0, 0, 0, 0,
     0, 1, 1, 1, 1, 0,
     0, 0, 0, 0, 0, 0,
@@ -350,10 +350,10 @@ int nZeroC[8][6] = {
     0, 0, 0, 0, 0, 0
 };
 
-int (*numsC[10])[6] = {nZeroC, nOneC, nTwoC, nThreeC, nFourC, nFiveC, nSixC, nSevenC, nEigthC, nNineC};
+static int (*numsC[10])[6] = {nZeroC, nOneC, nTwoC, nThreeC, nFourC, nFiveC, nSixC, nSevenC, nEigthC, nNineC};
 
 // All styles
 
-int (**nums[])[6] = { numsF, numsS, numsC };
+static int (**nums[])[6] = { numsF, numsS, numsC };
 
 #endif

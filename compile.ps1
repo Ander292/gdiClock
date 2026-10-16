@@ -3,13 +3,14 @@ $CompFlags = @(
     "-Wextra"
     "-Wno-cast-function-type"
     "-fdiagnostics-show-option"
-    #"-g"
+    # "-g"
     "-O2"
 )
 $LinkFlags = @(
     "-pedantic"
     "-m64"
     "-mwindows"
+    "-Wl,-s"
 )
 
 windres res/res.rc -Isrc -O coff -o bin/res.obj

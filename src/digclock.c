@@ -121,12 +121,12 @@ LRESULT CALLBACK MainWindowCallback(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM 
                         L"WindowDim: x:%d | y:%d | dx:%d | dy:%d\n"
                         L"Style: %ls",
                         wsInfo.cx, wsInfo.cy, CELL_SIZE, r.left, r.top, r.right, r.bottom,
-                        (iStyle ? (iStyle == 1 ? L"Reduced" : L"Dot") : L"Default"));
+                        (iStyle ? (iStyle == 1 ? (iStyle == 2 ? L"Rainworld" : L"Reduced") : L"Dot") : L"Default"));
                     MessageBoxW(hWnd, wczBuffer, L"Program info", MB_OK | MB_ICONMASK);
                 } break;
                 case 'C':{
                     iStyle++;
-                    if(iStyle > 2) iStyle = 0;
+                    if(iStyle > 3) iStyle = 0;
                     InvalidateRect(hWnd, NULL, TRUE);
                 } break;
                 case 'W':{ // For ctrl+w alternative to ALT+F4

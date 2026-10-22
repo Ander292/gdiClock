@@ -13,6 +13,8 @@ $LinkFlags = @(
     "-Wl,-s"
 )
 
+New-Item -type Directory "bin" -f | Out-Null
+
 windres res/res.rc -Isrc -O coff -o bin/res.obj
-gcc src/*.c -Isrc $CompFlags bin/res.obj $LinkFlags -o bin/clock.exe
+gcc src/digclock.c -Isrc $CompFlags bin/res.obj $LinkFlags -o bin/clock.exe
 rm bin/res.obj
